@@ -29,6 +29,7 @@ public class Datepicker {
 
 	public void datepickertest(){
 		driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
+		driver.switchTo().frame(driver.findElement(By.cssSelector(".demo-frame")));
 		driver.findElement(By.id("datepicker")).click();	
 	List<WebElement> allDates=driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']//td"));
 	for(WebElement ele:allDates){

@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="MyMavenProject.MavenProject.CreateAcountOnFacebook"/>
-      <class name="MyMavenProject.MavenProject.facebooklogin"/>
-      <class name="MyMavenProject.MavenProject.Datepicker"/>
+      <class name="MyMavenProject.MavenProject.F_C_Test"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
+  <test name="Test(failed)" parallel="methods">
     <classes>
-      <class name="MyMavenProject.MavenProject.Datepicker">
+      <class name="MyMavenProject.MavenProject.F_C_Test">
         <methods>
-          <include name="testexample"/>
+          <include name="test003"/>
+          <include name="test002"/>
+          <include name="test001"/>
         </methods>
-      </class> <!-- MyMavenProject.MavenProject.Datepicker -->
-      <class name="MyMavenProject.MavenProject.CreateAcountOnFacebook">
-        <methods>
-          <include name="test"/>
-          <include name="Testverification"/>
-          <include name="close"/>
-        </methods>
-      </class> <!-- MyMavenProject.MavenProject.CreateAcountOnFacebook -->
+      </class> <!-- MyMavenProject.MavenProject.F_C_Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
